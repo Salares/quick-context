@@ -1,0 +1,54 @@
+{
+  "name": "quick-context",
+  "displayName": "Quick Context",
+  "description": "Generate markdown catch-up prompts from selected files.",
+  "version": "1.0.0",
+  "publisher": "your-publisher-id",
+  "license": "ISC",
+  "engines": {
+    "vscode": "^1.106.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onCommand:quickContext.generateFromSelection"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "quickContext.generateFromSelection",
+        "title": "Quick Context: Generate Catch-up Prompt"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "quickContext.generateFromSelection",
+          "group": "navigation"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "quickContext.generateFromSelection",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run build",
+    "build": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "test": "echo \"No tests\""
+  },
+  "keywords": [],
+  "author": "",
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@types/vscode": "^1.106.1",
+    "typescript": "^5.9.3",
+    "vsce": "^2.15.0"
+  }
+}
