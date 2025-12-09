@@ -1,12 +1,16 @@
 {
   "name": "quick-context",
   "displayName": "Quick Context",
-  "description": "Generate markdown catch-up prompts from selected files.",
+  "description": "Generate LLM-ready markdown catch-up prompts from selected files and folders.",
   "repository": {
     "type": "git",
     "url": "https://github.com/Salares/quick-context.git"
   },
-  "version": "1.0.0",
+  "bugs": {
+    "url": "https://github.com/Salares/quick-context/issues"
+  },
+  "homepage": "https://github.com/Salares/quick-context",
+  "version": "1.0.1",
   "publisher": "dev-salares",
   "license": "ISC",
   "engines": {
@@ -47,8 +51,14 @@
     "watch": "tsc -watch -p ./",
     "test": "echo \"No tests\""
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "llm",
+    "chatgpt",
+    "context",
+    "prompt",
+    "markdown"
+  ],
+  "author": "Daniel Koláček",
   "devDependencies": {
     "@types/node": "^24.10.1",
     "@types/vscode": "^1.106.1",
